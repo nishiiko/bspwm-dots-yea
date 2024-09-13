@@ -1,0 +1,52 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+      "source": "~/Pictures/Icons/CelesteIconRound.png",
+      "width": 45 
+    },
+    "modules": [
+//      "title",
+	{
+	    "type": "custom",
+	    "format": "\u001b[35mnyanlinux :3"
+	},
+        "separator",
+        {
+            "type": "os",
+            "format": "{3} {12}"
+        },
+        {
+            "type": "host",
+            "format": "{/2}{-}{/}{2}{?3} {3}{?}"
+        },
+        "kernel",
+        "uptime",
+        "packages",
+        "shell",
+        {
+            "type": "display",
+            "compactType": "original",
+            "key": "Resolution"
+        },
+        "de",
+        "wm",
+        "terminal",
+        {
+            "type": "terminalfont",
+            "format": "{/2}{-}{/}{2}{?3} {3}{?}"
+        },
+        "cpu",
+        {
+            "type": "gpu",
+            "key": "GPU"
+        },
+        {
+            "type": "memory",
+            "format": "{/1}{-}{/}{/2}{-}{/}{} / {}"
+        },
+	"disk",
+	"player",
+	"break",
+        "colors"
+    ]
+}
