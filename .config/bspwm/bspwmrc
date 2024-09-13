@@ -1,0 +1,48 @@
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+bspc monitor DP-0 -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor HDMI-0 -d 1 2 3 4 5 6 7 8 9 10
+
+# spawn certain windows in certain workspaces
+bspc rule -a firefox-esr desktop=^2
+bspc rule -a discord desktop=^3
+bspc rule -a vesktop desktop=^3
+bspc rule -a kitty desktop=^1
+bspc rule -a Nemo desktop=^5
+bspc rule -a Spotify desktop=^9
+bspc rule -a obs desktop=^10
+
+bspc config border_width         4
+bspc config window_gap          12
+
+# bspc config focused_border_color \#6333ae
+bspc config normal_border_color \#5d3d76
+bspc config active_border_color \#5d3d76
+bspc config focused_border_color \#ad5da6
+bspc config pointer_motion_interval 7
+bspc config focus_follows_pointer true
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# startup
+sxhkd &
+gentoo-pipewire-launcher restart &
+nitrogen ~/Pictures/wallpoopers/Celeste.png --set-tiled --save &
+picom &
+~/.config/bspwm/resources/scripts/launch_polybar.sh &
+dunst &
+otd-daemon &
+doas nvidia-smi -i 0 -pl 125 && notify-send "Power limit set" -t 4000 -i messagebox_info &
+nvidia-settings -a "[gpu:0]/GPUGraphicsClockOffset[3]=100" && notify-send "Clock offset set" -t 4000 -i messagebox_info &
+nvidia-settings -a "[gpu:0]/GPUMemoryTransferRateOffset[3]=1000" && notify-send "Memory clock set" -t 4000 -i messagebox_info &
+/usr/libexec/polkit-gnome-authentication-agent-1 --no-startup-id &
+mpv --no-video --volume=100 ~/.config/bspwm/resources/startup.wav &
+setxkbmap -option grp:alt_shift_toggle gb,gb\(colemak_dh\) &
+~/.config/bspwm/resources/scripts/vencord_rpc.sh &
+
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+#bspc rule -a Chromium desktop='^2'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
