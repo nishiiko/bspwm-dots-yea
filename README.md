@@ -1,2 +1,4 @@
 # bspwm-dots-yea
-my dots
+my dots\
+theres nvidia undervolting/overclocking stuff in my bspwmrc so uh\
+you should probably comment that out before you use it
