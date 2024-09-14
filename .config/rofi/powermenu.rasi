@@ -1,10 +1,7 @@
 configuration {
-	drun-display-format: "{name}";
 	font: "JetBrainsMono 16";
-	modi: "drun,run,window,emoji";
-	sort: true;
-	case-sensitivity: false;
-	sorting-method: "fzf";
+	modi: "drun,run,window";
+	sort: false;
 	hide-scrollabr: true;
 	terminal: "kitty";
 	sidebar-mode: true;
@@ -26,11 +23,12 @@ configuration {
 
 #window {
 	border: 4;
-	border-color: #ad5da6;
+	border-color: @border;
 	border-radius: 15;
 	background-color: @background;
-	width: 40%;
+	width: 30%;
 }
+
 
 #mainbox {
 	border: 0;
@@ -38,19 +36,17 @@ configuration {
 }
 
 #case-indicator {
+	enabled: false;
 	text-color: @fgt;
 	margin: 0px 0px 0px 5px;
 }
 
-#textbox {
-	text-color: @fgt;
-}
 #listview {
 	fixed-height: 0;
 	scrollbar: false;
-	padding: 2px 0px 0px 0px;
-	lines: 6;
-	border-color: #aaaaaaaa;
+	padding: -2px 0px 0px 0px;
+	lines: 3;
+	border-color: #aaaaaa00;
 }
 
 #element {
@@ -109,26 +105,33 @@ configuration {
 	text-color: @fgt;
 }
 
+#inputbar {
+	enabled: false;
+}
+
+
 #prompt {
 	text-color: @fgt;
-	margin: 0px 0px 5px 10px;
+	enabled: false;
 }
+
 #entry {
-	text-color: @fgt;
+	enabled: false;
 }
 
 #textbox-prompt-colon {
-	expand: false;
+	enabled: false;
 	text-color: @fgts;
 }
 
 #button {
 	text-color: @fgt;
 	margin: 5px 0px 0px 0px;
+	enabled: false;
 }
 
 #button.selected {
 	background-color: @bg-selected;
-	border-radius: 11px;
+	border-radius: 15px;
 	text-color: @fgts;
 }
