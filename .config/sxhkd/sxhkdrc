@@ -10,6 +10,10 @@ super + t
 super + d 
 	rofi -config ~/.config/rofi/launcher.rasi -show drun
 
+# power menu
+super + Prior 
+	rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -config ~/.config/rofi/powermenu.rasi
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -19,10 +23,10 @@ super + Escape
 #
 
 super + Print
-	flameshot full
-
+	~/.config/bspwm/resources/scripts/screenshot_fullscreen.sh
+ 
 super + { shift + } Print
-	flameshot gui
+	~/.config/bspwm/resources/scripts/screenshot_region.sh
 
 # firefox
 super + f
