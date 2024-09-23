@@ -8,11 +8,11 @@ super + t
 
 # program launcher
 super + d 
-	rofi -config ~/.config/rofi/launcher.rasi -show drun
+	rofi -config ~/.config/rofi/launcher.rasi -show drun -monitor primary
 
-# power menu
+ power menu
 super + Prior 
-	rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -config ~/.config/rofi/powermenu.rasi
+	rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu -config ~/.config/rofi/powermenu.rasi -monitor primary
 
 # make sxhkd reload its configuration files:
 super + Escape
