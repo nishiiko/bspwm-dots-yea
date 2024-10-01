@@ -48,9 +48,9 @@ configuration {
 #listview {
 	fixed-height: 0;
 	scrollbar: false;
-	padding: 2px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	lines: 6;
-	border-color: #aaaaaaaa;
+	border-color: #aaaaaa00;
 }
 
 #element {
