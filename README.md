@@ -1,3 +1,5 @@
+# i dont use this anymore 2025-01-16
+
 # bspwm-dots-yea
 my dots\
 theres nvidia undervolting/overclocking stuff in my bspwmrc so uh\
